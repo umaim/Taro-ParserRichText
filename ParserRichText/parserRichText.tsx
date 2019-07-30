@@ -85,12 +85,6 @@ interface Props {
  * ParserRichText 富文本组件
  */
 class ParserRichText extends Taro.Component<Props, {}> {
-  public config: Taro.Config = {
-    usingComponents: {
-      parser: './Parser/index'
-    }
-  };
-
   public static defaultProps = {
     html: [],
     autocopy: true,
@@ -101,6 +95,12 @@ class ParserRichText extends Taro.Component<Props, {}> {
     selectable: false,
     tagStyle: {},
     imgMode: 'default'
+  };
+
+  public config: Taro.Config = {
+    usingComponents: {
+      parser: './Parser/index'
+    }
   };
 
   public render(): JSX.Element {
