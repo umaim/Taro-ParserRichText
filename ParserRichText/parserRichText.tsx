@@ -97,11 +97,11 @@ class ParserRichText extends Taro.Component<Props, {}> {
     imgMode: 'default'
   };
 
-  public config: Taro.Config = {
-    usingComponents: {
-      parser: './Parser/index'
-    }
-  };
+//   public config: Taro.Config = {
+//     usingComponents: {
+//       parser: './Parser/index'
+//     }
+//   };
 
   public render(): JSX.Element {
     const {

@@ -10,6 +10,14 @@
 2. 在需要富文本渲染的页面/组件中导入组件 `import ParserRichText from '组件路径';`
 3. 需要使用的地方使用 `ParserRichText` 组件即可，访问 [Parser](https://github.com/jin-yufeng/Parser) 了解参数详情及注意事项
 4. 在 [NervJS/taro#3885](https://github.com/NervJS/taro/issues/3885) 未解决之前，需要在 config/index.js 文件中添加 config.copy.patterns 复制组件到目标文件夹。参考：[config/index.js#L32](https://github.com/xPixv/SteamCN-Mini-Program/blob/f6ca35869f434127f9d88eb7db3977adb7fd1eb0/config/index.js#L32)
+5. Taro3 的组件是没有配置文件的，因此 usingComponents 必须配置在“页面”的配置文件中。
+~~~
+export default {
+    usingComponents: {
+         parser: 'components/common/ParserRichText/Parser/index'
+    }
+}
+~~~
 
 **请访问 [Parser](https://github.com/jin-yufeng/Parser) 原仓库了解更多参数详解及注意事项**
 
